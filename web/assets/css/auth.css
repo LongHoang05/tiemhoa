@@ -1,0 +1,183 @@
+/* --- COMMON AUTH STYLES --- */
+.auth-container { 
+    max-width: 450px; 
+    margin: 80px auto; 
+    padding: 0 20px; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/* Wide container for register */
+.auth-container.register { 
+    max-width: 500px; 
+    margin: 60px auto; 
+}
+
+.auth-card { 
+    background: #fff; 
+    padding: 40px; 
+    border-radius: 24px; 
+    border: 1px solid #fce2e6; 
+    box-shadow: 0 10px 40px rgba(151,0,70,0.05); 
+    text-align: center; 
+}
+
+.auth-logo { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 32px; 
+    color: #970046; 
+    font-style: italic; 
+    margin-bottom: 10px; 
+    display: block; 
+    text-decoration: none; 
+}
+
+.auth-title { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 24px; 
+    color: #26181b; 
+    margin-bottom: 30px; 
+    font-weight: 500; 
+}
+
+.auth-form { 
+    text-align: left; 
+}
+
+/* Grid layout for register form */
+.auth-form.grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+}
+
+.auth-group { 
+    margin-bottom: 20px; 
+}
+
+.auth-group.compact { 
+    margin-bottom: 5px; 
+}
+
+.full-width { 
+    grid-column: span 2; 
+}
+
+.auth-label { 
+    display: block; 
+    font-size: 12px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    color: #8d7075; 
+    margin-bottom: 8px; 
+}
+
+/* Slightly smaller label for register */
+.auth-form.grid .auth-label { 
+    font-size: 11px; 
+    margin-bottom: 6px; 
+}
+
+.auth-input { 
+    width: 100%; 
+    padding: 14px 16px; 
+    border-radius: 12px; 
+    border: 1px solid #eed4d8; 
+    background: #fff8f7; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 14px; 
+    outline: none; 
+    transition: 0.3s; 
+    box-sizing: border-box;
+}
+
+/* Slightly smaller input for register */
+.auth-form.grid .auth-input { 
+    padding: 12px 14px; 
+    border-radius: 10px; 
+    font-size: 13px; 
+}
+
+.auth-input:focus { 
+    border-color: #970046; 
+    background: #fff; 
+    box-shadow: 0 0 0 4px rgba(151,0,70,0.05); 
+}
+
+.btn-auth { 
+    width: 100%; 
+    padding: 16px; 
+    background: #970046; 
+    color: #fff; 
+    border: none; 
+    border-radius: 50px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    font-size: 13px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-top: 10px;
+}
+
+/* Register button spanning 2 columns */
+.auth-form.grid .btn-auth { 
+    padding: 14px; 
+    font-size: 12px; 
+    margin-top: 15px; 
+    grid-column: span 2; 
+}
+
+.btn-auth:hover { 
+    background: #be185d; 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 20px rgba(151,0,70,0.2); 
+}
+
+.auth-footer { 
+    margin-top: 25px; 
+    font-size: 14px; 
+    color: #594046; 
+}
+
+.auth-form.grid .auth-footer { 
+    grid-column: span 2; 
+    text-align: center;
+}
+
+.auth-link { 
+    color: #970046; 
+    font-weight: 600; 
+    text-decoration: none; 
+    margin-left: 5px; 
+}
+
+.auth-link:hover { 
+    text-decoration: underline; 
+}
+
+/* Alerts */
+.alert { 
+    padding: 12px; 
+    border-radius: 12px; 
+    margin-bottom: 20px; 
+    font-size: 13px; 
+    font-weight: 500; 
+}
+
+.auth-form.grid .alert { 
+    grid-column: span 2; 
+    text-align: center;
+}
+
+.alert-error { 
+    background: #fff0f2; 
+    color: #ba1a1a; 
+    border: 1px solid #ffdad6; 
+}
+
+.alert-success { 
+    background: #f0fdf4; 
+    color: #155724; 
+    border: 1px solid #dcfce7; 
+}

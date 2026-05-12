@@ -1,0 +1,110 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 8, 2026, 9:46:12 PM
+    Author     : ASUS
+*/
+
+/* --- LEFT SIDEBAR STYLE --- */
+.sidebar {
+  width: 220px; /* Thu hẹp từ 250px xuống 220px để nhường chỗ cho sản phẩm */
+  flex-shrink: 0;
+  position: sticky;
+  top: 85px; /* Giảm khoảng cách dính trên cùng do thanh Header đã nhỏ lại */
+  height: fit-content;
+}
+
+.sidebar-title {
+  font-size: 13px; /* Giảm từ 14px xuống 13px */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #26181b;
+  margin-bottom: 16px; /* Thu gọn khoảng cách */
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eed4d8;
+}
+
+.category-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.category-list li {
+  margin-bottom: 12px; /* Rút ngắn khoảng cách giữa các link danh mục */
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Thu nhỏ khoảng cách giữa dấu chấm và chữ */
+  text-decoration: none;
+  color: #594046;
+  font-size: 14px; /* Giảm từ 16px xuống 14px cho tinh tế */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot {
+  width: 5px; /* Dấu chấm nhỏ lại một chút */
+  height: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.category-link:hover,
+.category-link.active {
+  color: #970046;
+}
+
+.category-link:hover .dot,
+.category-link.active .dot {
+  background-color: #970046;
+}
+
+/* --- BỘ LỌC GIÁ --- */
+.price-filter label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  color: #594046;
+  font-size: 14px; /* Quy định rõ font-size 14px cho chữ bên cạnh ô checkbox */
+  transition: color 0.3s;
+}
+
+.price-filter label:hover {
+  color: #970046;
+}
+
+.price-filter input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #970046;
+  cursor: pointer;
+}
+
+.btn-filter-apply {
+  width: 90%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #970046;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-filter-apply:hover {
+  background-color: #7a0038;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(151, 0, 70, 0.2);
+}

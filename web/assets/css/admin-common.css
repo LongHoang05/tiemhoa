@@ -1,0 +1,344 @@
+/* --- ADMIN COMMON COMPONENTS --- */
+
+/* Global Icon Style */
+svg.icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+/* Header Area */
+.admin-header {
+    margin: -32px -24px 24px -24px;
+    padding: 20px 24px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.admin-header p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 4px 0 0 0;
+}
+
+.admin-header .back-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Forms & Layout */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.admin-form {
+    padding: 32px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 0; /* Override if needed, but grid handled gaps */
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.admin-input, .admin-select, .admin-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.admin-input:focus, .admin-select:focus, .admin-textarea:focus {
+    border-color: var(--primary);
+}
+
+.admin-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 13px;
+    background: var(--bg-color);
+}
+
+.status-badge.primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.status-badge.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Alerts */
+.admin-alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.admin-alert-error {
+    background: #ffdad6;
+    color: #ba1a1a;
+}
+
+.admin-alert-success {
+    background: #f0fdf4;
+    color: #155724;
+}
+
+/* Table Enhancements */
+.admin-table-header {
+    background: #fafafa;
+}
+
+.admin-table-header th {
+    padding: 16px;
+    border-bottom: 2px solid var(--border);
+}
+
+.admin-pagination-container {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid var(--border);
+}
+
+.toolbar-search {
+    width: 360px;
+}
+
+/* Detail Pages */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.info-card {
+    padding: 24px;
+}
+
+.info-card h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.info-item {
+    display: flex;
+}
+
+.info-label {
+    width: 120px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.info-value {
+    font-weight: 600;
+    color: var(--text-main);
+    flex: 1;
+    line-height: 1.5;
+}
+
+.info-value.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--error);
+}
+
+.table-title {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.table-title h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.table-footer-total {
+    padding: 20px 24px;
+    text-align: right;
+    background: #fafafa;
+    border-top: 1px solid var(--border);
+}
+
+.table-footer-total .label {
+    color: var(--text-muted);
+    margin-right: 16px;
+    font-weight: 500;
+}
+
+.table-footer-total .value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--error);
+}
+
+/* Dashboard Stat Cards */
+.stat-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+}
+
+.stat-card {
+    background: #fff !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    border: 1px solid var(--border) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;
+    transition: 0.3s !important;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon svg.icon {
+    font-size: 32px;
+}
+
+.stat-info h3 {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-info .value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 4px;
+}
+
+/* Icon Colors */
+.icon-revenue { background: #e8f5e9; color: #2e7d32; }
+.icon-orders { background: #e3f2fd; color: #1565c0; }
+.icon-customers { background: #f3e5f5; color: #7b1fa2; }
+.icon-products { background: #fff3e0; color: #ef6c00; }
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.section-title h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* Toast Notification */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #2e7d32;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}

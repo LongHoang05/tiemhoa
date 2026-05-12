@@ -1,0 +1,155 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 8, 2026, 9:32:08 PM
+    Author     : ASUS
+*/
+
+/* --- FOOTER MAIN --- */
+.footer-wrapper {
+    background-color: var(--surface-low, #fff8f7);
+    padding: 60px 24px 0; /* Giảm padding top từ 80px xuống 60px */
+    border-top: 1px solid #fce2e6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 32px; /* Giảm khoảng cách giữa các cột từ 48px xuống 32px */
+    padding-bottom: 40px; /* Giảm từ 60px xuống 40px */
+}
+
+/* Cột 1: Thương hiệu */
+.footer-brand h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; /* Giảm từ 28px xuống 24px */
+    color: #970046; /* var(--primary-pink) */
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 13px; /* Giảm từ 14px xuống 13px */
+    color: #594046; /* var(--text-gray) */
+    line-height: 1.6;
+    max-width: 280px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px; /* Giảm khoảng cách icon */
+}
+
+.social-icons a {
+    color: #594046;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #970046;
+}
+
+/* Cột 2 & 3: Liên kết */
+.footer-heading {
+    font-size: 13px; /* Thu nhỏ tiêu đề cột */
+    font-weight: 600;
+    color: #26181b; /* var(--text-dark) */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Giảm gap giữa các link */
+}
+
+.footer-links a {
+    font-size: 13px; /* Giảm font-size link */
+    color: #594046;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    width: fit-content;
+}
+
+/* Hiệu ứng dịch mũi tên nhẹ khi hover */
+.footer-links a:hover {
+    color: #970046;
+    transform: translateX(6px);
+    text-decoration: underline;
+    text-decoration-color: #970046;
+    text-underline-offset: 4px;
+}
+
+/* --- TEAM MEMBERS SECTION (YÊU CẦU BẮT BUỘC) --- */
+.footer-team {
+    background-color: #fdf2f8;
+    padding: 40px 24px 24px; /* Giảm padding khối team */
+    border-top: 2px solid #be185d; /* var(--primary-light) */
+    text-align: center;
+}
+
+.footer-team h4 {
+    color: #be185d;
+    font-size: 16px; /* Giảm từ 18px xuống 16px */
+    text-transform: uppercase;
+    margin-bottom: 24px; /* Giảm gap từ 30px xuống 24px */
+    letter-spacing: 1px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Giảm khoảng cách các card */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: #fff;
+    padding: 12px 24px; /* Thu gọn padding trong card */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(151, 0, 70, 0.05);
+    border: 1px solid #fbcfe8;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+}
+
+.team-name {
+    margin: 0 0 4px 0;
+    font-weight: 700;
+    color: #26181b;
+    font-size: 14px; /* Thu nhỏ tên */
+}
+
+.team-dob {
+    margin: 0;
+    color: #594046;
+    font-size: 12px; /* Thu nhỏ ngày sinh */
+}
+
+.footer-copyright {
+    margin-top: 30px; /* Giảm khoảng cách bản quyền */
+    font-size: 12px;
+    color: #8d7075;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

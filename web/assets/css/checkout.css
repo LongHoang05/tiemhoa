@@ -1,0 +1,348 @@
+/* --- CSS THANH TOÁN (POETIC MINIMALISM - LAYOUT CHUẨN) --- */
+.checkout-wrapper { 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.checkout-header { 
+    text-align: left; 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #fce2e6; 
+    padding-bottom: 20px; 
+}
+
+.checkout-title { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 36px; 
+    color: #970046; 
+    margin-bottom: 8px; 
+}
+
+.checkout-subtitle { 
+    font-size: 14px; 
+    color: #594046; 
+}
+
+/* Layout: Trái 7 phần, Phải 5 phần */
+.checkout-grid { 
+    display: grid; 
+    grid-template-columns: 1.3fr 1fr; 
+    gap: 50px; 
+    align-items: start; 
+    position: relative; 
+}
+
+/* Vách ngăn ảo ở giữa cho màn hình lớn */
+.vertical-divider { 
+    display: none; 
+}
+
+@media (min-width: 992px) {
+    .vertical-divider { 
+        display: block; 
+        position: absolute; 
+        left: 56%; 
+        top: 0; 
+        bottom: 0; 
+        width: 1px; 
+        background: #fce2e6; 
+        transform: translateX(-50%); 
+    }
+}
+
+/* --- CỘT TRÁI (THÔNG TIN & THANH TOÁN) --- */
+.left-col { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 40px; 
+    padding-right: 20px;
+}
+
+.section-title { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 22px; 
+    color: #970046; 
+    margin-bottom: 20px; 
+}
+
+.form-group { 
+    margin-bottom: 16px; 
+}
+
+.form-label { 
+    display: block; 
+    font-size: 12px; 
+    font-weight: 600; 
+    color: #594046; 
+    margin-bottom: 8px; 
+}
+
+.form-input { 
+    width: 100%; 
+    padding: 12px 16px; 
+    border-radius: 8px; 
+    border: 1px solid #eed4d8; 
+    background: #fff; 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 13px; 
+    outline: none; 
+    transition: 0.3s; 
+    box-sizing: border-box;
+}
+
+.form-input:focus { 
+    border-color: #970046; 
+    box-shadow: 0 0 0 2px rgba(151,0,70,0.1); 
+}
+
+textarea.form-input { 
+    resize: none; 
+}
+
+/* Phương thức thanh toán */
+.payment-options { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+}
+
+.payment-label {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    padding: 16px; 
+    border: 1px solid #eed4d8; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    background: #fff;
+}
+
+.payment-label:hover { 
+    background: #fff0f2; 
+}
+
+.payment-label input[type="radio"] { 
+    accent-color: #970046; 
+    width: 16px; 
+    height: 16px; 
+}
+
+.payment-label span { 
+    font-size: 14px; 
+    font-weight: 500; 
+    color: #26181b; 
+}
+
+.payment-label svg.icon { 
+    color: #8d7075; 
+    font-size: 20px; 
+}
+
+/* --- CỘT PHẢI (TÓM TẮT & SẢN PHẨM) --- */
+.summary-col { 
+    position: sticky; 
+    top: 90px; 
+}
+
+.summary-box { 
+    padding: 30px; 
+    background: #fff0f2; 
+    border-radius: 16px; 
+    border: 1px solid rgba(238,212,216,0.5); 
+    position: relative; 
+    overflow: hidden;
+}
+
+/* Sản phẩm mini trong cột phải */
+.summary-header { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 20px; 
+    color: #970046; 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid rgba(151,0,70,0.1); 
+    padding-bottom: 12px; 
+}
+
+.mini-cart-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    max-height: 280px; 
+    overflow-y: auto; 
+    padding-right: 5px; 
+    margin-bottom: 24px; 
+}
+
+.mini-cart-list::-webkit-scrollbar { 
+    width: 4px; 
+}
+
+.mini-cart-list::-webkit-scrollbar-thumb { 
+    background: #e0bec4; 
+    border-radius: 4px; 
+}
+
+.mini-cart-item { 
+    display: flex; 
+    gap: 12px; 
+    align-items: center; 
+    padding-bottom: 12px; 
+    border-bottom: 1px dashed rgba(151,0,70,0.1); 
+}
+
+.mini-cart-item:last-child { 
+    border-bottom: none; 
+    padding-bottom: 0; 
+}
+
+.mini-cart-item img { 
+    width: 56px; 
+    height: 56px; 
+    object-fit: cover; 
+    border-radius: 6px; 
+    border: 1px solid #fce2e6; 
+    background: #fff; 
+}
+
+.mini-info { 
+    flex-grow: 1; 
+}
+
+.mini-name { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #26181b; 
+    margin-bottom: 4px; 
+    line-height: 1.3;
+}
+
+.mini-qty { 
+    font-size: 11px; 
+    color: #8d7075; 
+}
+
+.mini-price { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: #970046; 
+}
+
+/* Mã giảm giá */
+.discount-section { 
+    margin-bottom: 24px; 
+}
+
+.discount-label { 
+    font-size: 11px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    color: #594046; 
+    margin-bottom: 10px; 
+    display: block; 
+}
+
+.discount-flex { 
+    display: flex; 
+    gap: 8px; 
+}
+
+.discount-flex input { 
+    flex-grow: 1; 
+    padding: 10px 14px; 
+}
+
+.btn-apply { 
+    padding: 0 20px; 
+    background: #536439; 
+    color: #fff; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    font-size: 12px; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn-apply:hover { 
+    background: #3c4c24; 
+}
+
+/* Tóm tắt tiền */
+.summary-row { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 14px; 
+    color: #594046; 
+    margin-bottom: 12px; 
+}
+
+.summary-row.total { 
+    border-top: 1px solid rgba(151,0,70,0.1); 
+    padding-top: 20px; 
+    margin-top: 8px; 
+    font-weight: 600; 
+    color: #26181b; 
+    font-size: 16px; 
+    align-items: flex-end;
+}
+
+.total-price { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 28px; 
+    color: #970046; 
+}
+
+.btn-submit-order { 
+    width: 100%; 
+    padding: 16px; 
+    background: #970046; 
+    color: #fff; 
+    border: none; 
+    border-radius: 50px; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    font-size: 13px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px; 
+    margin-top: 30px;
+}
+
+.btn-submit-order:hover { 
+    background: #be185d; 
+    box-shadow: 0 8px 20px rgba(151,0,70,0.2); 
+    transform: translateY(-2px); 
+}
+
+.secure-text { 
+    text-align: center; 
+    font-size: 12px; 
+    color: #8d7075; 
+    margin-top: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+}
+
+@media (max-width: 992px) {
+    .checkout-grid { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+    }
+    .summary-col { 
+        position: static; 
+    }
+    .left-col { 
+        padding-right: 0; 
+    }
+}

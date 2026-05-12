@@ -1,0 +1,91 @@
+/* =========================================
+           GLOBAL CSS (Chỉ chứa biến và style nền tảng)
+           ========================================= */
+:root {
+  /* Hệ màu chung */
+  --bg-color: #fff8f7;
+  --surface-container: #ffe8ec;
+  --surface-variant: #fce2e6;
+
+  /* Màu chủ đạo */
+  --primary-pink: #970046;
+  --primary-light: #be185d;
+
+  /* Màu chữ và trang trí */
+  --text-dark: #26181b;
+  --text-gray: #594046;
+  --sage-green: #bace99;
+  --border-color: #eed4d8;
+
+  /* Hiệu ứng kính */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+
+  /* Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  /* Animations */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ép Footer luôn nằm dưới cùng */
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+/* Vùng chứa nội dung động sẽ đẩy footer xuống */
+#content {
+  flex-grow: 1;
+}
+
+/* --- CÁC COMPONENT DÙNG CHUNG --- */
+/* Nút chung */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-pink);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+/* Global Icon Style (SVG Sprite) */
+svg.icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}

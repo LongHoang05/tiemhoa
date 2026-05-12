@@ -1,0 +1,26 @@
+# NetBeans specific
+build/
+dist/
+nbproject/private/
+nbproject/genfiles.properties
+nbproject/ant-deploy.xml
+nbproject/build-impl.xml
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+glassfish-history.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# User specific scratch files
+scratch/
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
