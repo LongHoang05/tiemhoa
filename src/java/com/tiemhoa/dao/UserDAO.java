@@ -20,25 +20,27 @@ public class UserDAO {
 
     // 1. Kiểm tra Đăng nhập
     public User login(String loginName, String password) {
-        String sql = "SELECT * FROM users WHERE login_name = ? AND password = ?";
+        String sql = "SELECT * FROM users WHERE login_name = ?";
         try ( Connection conn = DBConnection.getConnection();  PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, loginName);
-            ps.setString(2, password);
 
             try ( ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    return new User(
-                            rs.getInt("user_id"),
-                            rs.getString("username"), // Họ và tên
-                            rs.getString("login_name"), // Tên đăng nhập
-                            rs.getString("password"),
-                            rs.getString("email"),
-                            rs.getString("phone"),
-                            rs.getString("address"),
-                            rs.getInt("role_id"),
-                            rs.getInt("status")
-                    );
+                    String storedPassword = rs.getString("password");
+                    if (com.tiemhoa.util.SecurityUtil.checkPassword(password, storedPassword)) {
+                        return new User(
+                                rs.getInt("user_id"),
+                                rs.getString("username"), // Họ và tên
+                                rs.getString("login_name"), // Tên đăng nhập
+                                storedPassword,
+                                rs.getString("email"),
+                                rs.getString("phone"),
+                                rs.getString("address"),
+                                rs.getInt("role_id"),
+                                rs.getInt("status")
+                        );
+                    }
                 }
             }
         } catch (Exception e) {
@@ -65,12 +67,13 @@ public class UserDAO {
 
     // 3. Đăng ký tài khoản mới (Mặc định role_id = 1 là Khách hàng, status = 1 là Active)
     public boolean registerUser(User user) {
+        String hashedPassword = com.tiemhoa.util.SecurityUtil.hashPassword(user.getPassword());
         String sql = "INSERT INTO users (username, login_name, password, email, phone, address, role_id, status) VALUES (?, ?, ?, ?, ?, ?, 1, 1)";
         try ( Connection conn = DBConnection.getConnection();  PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getLoginName());
-            ps.setString(3, user.getPassword());
+            ps.setString(3, hashedPassword);
             ps.setString(4, user.getEmail());
             ps.setString(5, user.getPhone());
             ps.setString(6, user.getAddress());

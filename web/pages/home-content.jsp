@@ -68,4 +68,26 @@
             </a>
         </c:forEach>
     </div>
+
+    <div class="section-header">
+        <div class="title-group">
+            <h2>Bán Chạy</h2>
+            <div class="green-line"></div>
+        </div>
+        <a href="${pageContext.request.contextPath}/products" class="view-all">Xem tất cả sản phẩm</a>
+    </div>
+
+    <div class="product-grid">
+        <c:forEach items="${bestSellerProducts}" var="p">
+            <a href="${pageContext.request.contextPath}/product-detail?id=${p.productId}" class="product-card">
+                <div class="img-box">
+                    <img src="${pageContext.request.contextPath}/assets/images/products/${not empty p.imageUrl ? p.imageUrl : 'default.jpg'}" alt="${p.name}"/>
+                </div>
+                <div class="product-info">
+                    <h3>${p.name}</h3>
+                    <span><fmt:formatNumber value="${p.price}" pattern="#,###"/> VND</span>
+                </div>
+            </a>
+        </c:forEach>
+    </div>
 </main>
