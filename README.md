@@ -117,9 +117,9 @@ banhoa/
 ---
 
 ## 👥 Đội ngũ & Liên hệ
-*   **Chủ dự án:** Ngọc Chi (ASUS)
+*   **Chủ dự án:** Nguyễn Hoàng Long
 *   **Email:** [Email của bạn]
-*   **GitHub:** [Link GitHub của bạn]
+*   **GitHub:** https://github.com/LongHoang05
 
 ---
 *Dự án được thực hiện với sự tâm huyết nhằm mang cái đẹp của hoa tươi đến gần hơn với mọi người thông qua công nghệ.* 🌸
